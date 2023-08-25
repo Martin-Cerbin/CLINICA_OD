@@ -11,9 +11,8 @@ public class ClinicaOdontologicaApplication {
 
 		SpringApplication.run(ClinicaOdontologicaApplication.class, args);
 
-		/*BD.getConnection();
-
-		BD.crearTablas();*/
+		BD.getConnection();
+		BD.crearTablas();
 
 	}
 

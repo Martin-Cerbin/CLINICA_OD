@@ -50,7 +50,7 @@ public class DomicilioDAOH2 implements iDao<Domicilio>{
 
     @Override
     public Domicilio buscar(Integer id) {
-        logger.info("inicio de operacion de : ");
+        logger.info("inicio de operacion de : buscado");
         Connection connection = null;
         Domicilio domicilio = null;
         try {
@@ -77,7 +77,7 @@ public class DomicilioDAOH2 implements iDao<Domicilio>{
 
     @Override
     public void eliminar(Integer id) {
-        logger.info("inicio de operacion de : ");
+        logger.info("inicio de operacion de : eliminar");
             Connection connection= null;
             try{
                 connection= BD.getConnection();

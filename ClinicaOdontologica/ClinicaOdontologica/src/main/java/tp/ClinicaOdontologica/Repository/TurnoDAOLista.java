@@ -14,10 +14,6 @@ public class TurnoDAOLista implements iDao<Turno> {
 @Autowired
     private List<Turno> turnoLista= new ArrayList<>();
 
-   /* public TurnoDAOLista() {
-        turnoLista= new ArrayList<>();
-    }*/
-
     @Override
     public Turno guardar(Turno turno) {
         turnoLista.add(turno);
@@ -32,7 +28,7 @@ public class TurnoDAOLista implements iDao<Turno> {
             if(turno.getId().equals(id)){
                 return turno;
             }
-                 }
+        }
         return null;
     }
 

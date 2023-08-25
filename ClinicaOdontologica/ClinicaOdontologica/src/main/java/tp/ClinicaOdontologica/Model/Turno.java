@@ -13,5 +13,5 @@ public class Turno {
     private Integer id;
     private Paciente paciente;
     private Odontologo odontologo;
-    private LocalDate Fecha;
+    private LocalDate fecha;
 }
