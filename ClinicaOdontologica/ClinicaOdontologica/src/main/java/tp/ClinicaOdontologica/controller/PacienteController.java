@@ -39,12 +39,6 @@ public class PacienteController {
         return ResponseEntity.ok(pacienteService.buscarPorId(id));
 }
 
-    /* ========== BUSCAR POR EMAIL ========== */
-    @GetMapping("/email/{email}")
-    public ResponseEntity<Optional<Paciente>> buscarPorEmail(@PathVariable String email){
-        return ResponseEntity.ok(pacienteService.buscarPorEmail(email));
-    }
-
     /* ========== ELIMINAR ========== */
     @DeleteMapping
     public ResponseEntity<String> eliminarPaciente(@PathVariable Long id){

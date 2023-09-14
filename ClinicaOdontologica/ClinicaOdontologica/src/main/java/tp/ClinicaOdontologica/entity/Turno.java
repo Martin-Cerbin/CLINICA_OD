@@ -11,8 +11,6 @@ import java.time.LocalDate;
 @Entity
 @Getter
 @Setter
-@AllArgsConstructor
-@NoArgsConstructor
 @Table(name = "turnos")
 public class Turno {
 
@@ -28,4 +26,17 @@ public class Turno {
     @JoinColumn(name = "odontologo_id",referencedColumnName = "id")
     private Odontologo odontologo;
 
+    public Turno() {
+    }
+    public Turno(Long id, LocalDate fecha, Paciente paciente, Odontologo odontologo) {
+        this.id = id;
+        Fecha = fecha;
+        this.paciente = paciente;
+        this.odontologo = odontologo;
+    }
+    public Turno(LocalDate fecha, Paciente paciente, Odontologo odontologo) {
+        Fecha = fecha;
+        this.paciente = paciente;
+        this.odontologo = odontologo;
+    }
 }

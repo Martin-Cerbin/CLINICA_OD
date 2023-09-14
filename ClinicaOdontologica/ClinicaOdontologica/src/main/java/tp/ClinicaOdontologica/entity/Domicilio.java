@@ -10,8 +10,6 @@ import javax.persistence.*;
 @Entity
 @Getter
 @Setter
-@AllArgsConstructor
-@NoArgsConstructor
 @Table(name = "domicilios")
 public class Domicilio {
     @Id
@@ -26,5 +24,21 @@ public class Domicilio {
     @Column
     private String provincia;
 
+    public Domicilio(Long id, String calle, Integer numero, String localidad, String provincia) {
+        this.id = id;
+        this.calle = calle;
+        this.numero = numero;
+        this.localidad = localidad;
+        this.provincia = provincia;
+    }
 
+    public Domicilio(String calle, Integer numero, String localidad, String provincia) {
+        this.calle = calle;
+        this.numero = numero;
+        this.localidad = localidad;
+        this.provincia = provincia;
+    }
+    public Domicilio() {
+    }
 }
+

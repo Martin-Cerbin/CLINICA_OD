@@ -25,9 +25,9 @@ public class TurnoController {
 
     /* ========== AGREGAR ========== */
     @PostMapping
-    public ResponseEntity<TurnoDTO> registrarTurno(@RequestBody Turno turno)                      {
+    public ResponseEntity<TurnoDTO> registrarTurno(@RequestBody Turno turno){
         //aca tengo el primer filtro
-        OdontologoService odontologoService= new OdontologoService();
+       /* OdontologoService odontologoService= new OdontologoService();
         PacienteService pacienteService= new PacienteService();
         if(pacienteService.buscarPorId(turno.getPaciente().getId()).isPresent() && odontologoService.buscarOdontologo(turno.getOdontologo().getId()).isPresent()){
             //ambos existen
@@ -35,7 +35,9 @@ public class TurnoController {
                     }
         else{
             return ResponseEntity.badRequest().build();
-        }
+        }*/
+
+        return ResponseEntity.ok(turnoService.guardarTurno(turno));
 
     }
 }

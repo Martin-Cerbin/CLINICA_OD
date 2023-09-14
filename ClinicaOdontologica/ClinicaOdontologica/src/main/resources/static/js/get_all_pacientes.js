@@ -1,17 +1,14 @@
 window.addEventListener('load', function () {
+
     (function(){
 
-      //con fetch invocamos a la API de peliculas con el método GET
-      //nos devolverá un JSON con una colección de peliculas
       const url = '/pacientes';
-      const settings = {
-        method: 'GET'
-      }
+      const settings = {method: 'GET'}
 
       fetch(url,settings)
       .then(response => response.json())
       .then(data => {
-      //recorremos la colección de peliculas del JSON
+      //recorremos la colección del JSON
          for(paciente of data){
             //por cada pelicula armaremos una fila de la tabla
             //cada fila tendrá un id que luego nos permitirá borrar la fila si eliminamos la pelicula

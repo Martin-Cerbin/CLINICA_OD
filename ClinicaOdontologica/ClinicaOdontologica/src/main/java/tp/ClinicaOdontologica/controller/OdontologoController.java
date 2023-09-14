@@ -20,7 +20,7 @@ public class OdontologoController {
     /* ========== BUSCAR POR ID ========== */
     @GetMapping("/{id}")
     public ResponseEntity<Optional<Odontologo>> buscarPorId(@PathVariable Long id){
-        return ResponseEntity.ok(odontologoService.buscarOdontologo(id));
+        return ResponseEntity.ok(odontologoService.buscarPorId(id));
     }
 
     /* ========== LISTAR ========== */
@@ -44,7 +44,7 @@ public class OdontologoController {
     /* ========== ACTUALIZAR ========== */
     @PutMapping
     public ResponseEntity<String> actualizarOdontologo(@RequestBody Odontologo odontologo){
-        Optional<Odontologo> odontologoBuscado= odontologoService.buscarOdontologo(odontologo.getId());
+        Optional<Odontologo> odontologoBuscado= odontologoService.buscarPorId(odontologo.getId());
         if(odontologoBuscado.isPresent()){
             odontologoService.actualizarOdontologo(odontologo);
             return ResponseEntity.ok("Paciente Actualizado con Exito: "+odontologo.getNombre());

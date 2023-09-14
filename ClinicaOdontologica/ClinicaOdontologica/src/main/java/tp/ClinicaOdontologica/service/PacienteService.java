@@ -28,7 +28,4 @@ public class PacienteService {
     public Optional<Paciente> buscarPorId(Long id){
         return pacienteRepository.findById(id);
     }
-    public Optional<Paciente> buscarPorEmail(String email){
-        return pacienteRepository.findByEmail(email);
-    }
 }

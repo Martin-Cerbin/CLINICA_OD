@@ -13,8 +13,6 @@ import java.util.Set;
 @Entity
 @Getter
 @Setter
-@AllArgsConstructor
-@NoArgsConstructor
 @Table(name = "odontologos")
 public class Odontologo {
 
@@ -30,4 +28,22 @@ public class Odontologo {
     @OneToMany(mappedBy ="odontologo", fetch = FetchType.LAZY)
     @JsonIgnore
     private Set<Turno> turnos= new HashSet<>();
+
+    public Odontologo() {
+    }
+
+    public Odontologo(String matricula, String nombre, String apellido, Set<Turno> turnos) {
+        this.matricula = matricula;
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.turnos = turnos;
+    }
+
+    public Odontologo(Long id, String matricula, String nombre, String apellido, Set<Turno> turnos) {
+        this.id = id;
+        this.matricula = matricula;
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.turnos = turnos;
+    }
 }
