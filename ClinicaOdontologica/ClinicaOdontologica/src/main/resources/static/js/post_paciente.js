@@ -2,21 +2,29 @@ window.addEventListener('load', function () {
 
     //Al cargar la pagina buscamos y obtenemos el formulario donde estarán
     //los datos que el usuario cargará el nuevo odontologo
-    const formulario = document.querySelector('#add_new_odontologo');
+    const formulario = document.querySelector('#add_new_paciente');
 
     //Ante un submit del formulario se ejecutará la siguiente funcion
     formulario.addEventListener('submit', function (event) {
 
        //creamos un JSON que tendrá los datos del nuevo odontologo
         const formData = {
-            matricula: document.querySelector('#matricula').value,
             nombre: document.querySelector('#nombre').value,
             apellido: document.querySelector('#apellido').value,
+            cedula: document.querySelector('#cedula').value,
+            fechaIngreso: document.querySelector('#fechaIngreso').value,
+            domicilio:{
+                calle: document.querySelector('#calle').value,
+                numero: document.querySelector('#numero').value,
+                localidad: document.querySelector('#localidad').value,
+                provincia: document.querySelector('#provincia').value,
+            },
+            email: document.querySelector('#email').value
         };
 
         //invocamos utilizando la función fetch la API con el método POST que guardará
         //el odontologo que enviaremos en formato JSON
-        const url = '/odontologos';
+        const url = '/pacientes';
         const settings = {
             method: 'POST',
             headers: {
@@ -54,9 +62,13 @@ window.addEventListener('load', function () {
 
 
     function resetUploadForm(){
-        document.querySelector('#matricula').value = "";
+
         document.querySelector('#nombre').value = "";
-         document.querySelector('#apellido').value = "";
+        document.querySelector('#apellido').value = "";
+        document.querySelector('#cedula').value = "";
+        document.querySelector('#fechaIngreso').value = "";
+        document.querySelector('#calle', '#numero','#localidad','#provincia').value = "";
+        document.querySelector('#email').value = "";
 
     }
 
@@ -64,7 +76,7 @@ window.addEventListener('load', function () {
         let pathname = window.location.pathname;
         if(pathname === "/"){
             document.querySelector(".nav .nav-item a:first").addClass("active");
-        } else if (pathname == "/odontologoList.html") {
+        } else if (pathname == "/pacienteList.html") {
             document.querySelector(".nav .nav-item a:last").addClass("active");
         }
     })();
