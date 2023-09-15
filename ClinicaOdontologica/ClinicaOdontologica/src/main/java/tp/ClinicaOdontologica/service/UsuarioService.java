@@ -24,6 +24,6 @@ public class UsuarioService implements UserDetailsService {
         }else{
             throw new UsernameNotFoundException("No se encontro el usuario con el correo suministrado");
         }
-
     }
+    public Usuario crearUsuario(Usuario usuario){return usuarioRepository.save(usuario);}
 }

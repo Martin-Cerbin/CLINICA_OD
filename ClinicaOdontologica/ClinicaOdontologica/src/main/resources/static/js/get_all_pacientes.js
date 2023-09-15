@@ -48,8 +48,7 @@ window.addEventListener('load', function () {
                      '<td>' + updateButton + '</td>'+
                     '<td>' + deleteButton + '</td>';
 
-        };
-
+          };
     })
     })
 
@@ -59,6 +58,5 @@ window.addEventListener('load', function () {
           document.querySelector(".nav .nav-item a:last").addClass("active");
       }
     })
-
 
     })

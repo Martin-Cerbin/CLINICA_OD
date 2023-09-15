@@ -1,6 +1,7 @@
 package tp.ClinicaOdontologica.controller;
 
 import tp.ClinicaOdontologica.dto.TurnoDTO;
+import tp.ClinicaOdontologica.entity.Paciente;
 import tp.ClinicaOdontologica.entity.Turno;
 import tp.ClinicaOdontologica.service.OdontologoService;
 import tp.ClinicaOdontologica.service.PacienteService;
@@ -9,6 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.time.LocalDate;
 import java.util.List;
 
 @RestController
@@ -16,6 +18,8 @@ import java.util.List;
 public class TurnoController {
     @Autowired
     private TurnoService turnoService= new TurnoService();
+    private PacienteService pacienteService;
+    private OdontologoService odontologoService;
 
     /* ========== BUSCAR TODOS ========== */
     @GetMapping
@@ -27,17 +31,13 @@ public class TurnoController {
     @PostMapping
     public ResponseEntity<TurnoDTO> registrarTurno(@RequestBody Turno turno){
         //aca tengo el primer filtro
-       /* OdontologoService odontologoService= new OdontologoService();
-        PacienteService pacienteService= new PacienteService();
-        if(pacienteService.buscarPorId(turno.getPaciente().getId()).isPresent() && odontologoService.buscarOdontologo(turno.getOdontologo().getId()).isPresent()){
+
+        if(pacienteService.buscarPorId(turno.getPaciente().getId()).isPresent()&&odontologoService.buscarPorId(turno.getOdontologo().getId()).isPresent()){
             //ambos existen
             return ResponseEntity.ok(turnoService.guardarTurno(turno));
-                    }
+        }
         else{
             return ResponseEntity.badRequest().build();
-        }*/
-
-        return ResponseEntity.ok(turnoService.guardarTurno(turno));
-
+        }
     }
 }

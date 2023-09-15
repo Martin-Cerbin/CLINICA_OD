@@ -46,6 +46,7 @@ window.addEventListener('load', function () {
                     '<td class=\"td_titulo\">' + odontologo.nombre.toUpperCase() + '</td>' +
                      '<td class=\"td_titulo\">' + odontologo.apellido.toUpperCase() + '</td>' +
                     '<td class=\"td_categoria\">' + odontologo.matricula.toUpperCase() + '</td>' +
+                    '<td>' + updateButton + '</td>'+
                     '<td>' + deleteButton + '</td>';
 
         };

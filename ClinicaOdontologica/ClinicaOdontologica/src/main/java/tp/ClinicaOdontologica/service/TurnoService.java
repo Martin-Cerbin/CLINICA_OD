@@ -57,7 +57,7 @@ public class TurnoService {
         turnoDTO.setPacienteId(turno.getPaciente().getId());
         return turnoDTO;
     }
-    private Turno turnoDTOaTurno(TurnoDTO turnoDTO){
+    public Turno turnoDTOaTurno(TurnoDTO turnoDTO){
         //conversion inversa manual
         Turno turno= new Turno();
         Paciente paciente= new Paciente();

@@ -39,6 +39,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .csrf().disable()
                 .authorizeRequests()
                 .antMatchers("/get_turnos.html").hasRole("USER")
+                .antMatchers("/**.html").hasRole("ADMIN")
                 .anyRequest()
                 .authenticated()
                 .and()
