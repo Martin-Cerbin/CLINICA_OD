@@ -1,13 +1,3 @@
 body{
-    background-image: url(../recursos/fondo\ Clinica\ Odontologica.jpg);
-}
-.collapse {
-    justify-content: space-around;
-}
-.row{
-    justify-content: center;
-    margin-top: 15vh;
-}
-.listar{
-    margin-left: 25vw;
+    background-color: gainsboro;
 }

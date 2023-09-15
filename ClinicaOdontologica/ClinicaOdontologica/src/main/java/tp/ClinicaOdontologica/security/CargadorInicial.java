@@ -40,5 +40,8 @@ public class CargadorInicial implements ApplicationRunner {
         String claveUser= cifrador.encode("user");
         Usuario usuarioUser= new Usuario("Juan","Juancito","juan@email.com",claveUser, UsuarioRole.ROLE_USER);
         usuarioRepository.save(usuarioUser);
+
+        /*Odontologo odontologo = new Odontologo("1234","Juan","Perez");
+        odontologoRepository.save(odontologo);*/
     }
 }

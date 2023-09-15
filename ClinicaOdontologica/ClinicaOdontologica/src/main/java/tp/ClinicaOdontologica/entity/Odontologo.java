@@ -39,11 +39,19 @@ public class Odontologo {
         this.turnos = turnos;
     }
 
+    public Odontologo(String matricula, String nombre, String apellido) {
+        this.matricula = matricula;
+        this.nombre = nombre;
+        this.apellido = apellido;
+    }
+
     public Odontologo(Long id, String matricula, String nombre, String apellido, Set<Turno> turnos) {
         this.id = id;
         this.matricula = matricula;
         this.nombre = nombre;
         this.apellido = apellido;
         this.turnos = turnos;
+
+
     }
 }

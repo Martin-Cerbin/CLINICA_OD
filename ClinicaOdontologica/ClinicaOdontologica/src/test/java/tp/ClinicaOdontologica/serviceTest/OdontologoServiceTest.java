@@ -23,7 +23,7 @@ class OdontologoServiceTest {
     @Test
     @Order(1)
     void guardarOdontologo() {
-        Odontologo odontologo = new Odontologo("1234","Juan","Perez",null);
+        Odontologo odontologo = new Odontologo("1234","Juan","Perez");
         Odontologo odontologoGuardado = odontologoService.guardarOdontologo(odontologo);
         assertEquals(1, odontologoGuardado.getId());
     }
