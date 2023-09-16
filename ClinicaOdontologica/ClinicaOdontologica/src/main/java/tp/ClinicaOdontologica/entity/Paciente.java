@@ -28,7 +28,7 @@ public class Paciente {
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "domicilio_id",referencedColumnName = "id")
     private Domicilio domicilio;
-    @Column(unique = true)
+    @Column
     private String email;
     @OneToMany(mappedBy ="paciente", fetch = FetchType.LAZY)
     private Set<Turno> turnos= new HashSet<>();

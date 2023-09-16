@@ -12,7 +12,7 @@ window.addEventListener('load', function () {
         //a diferencia de una pelicula nueva en este caso enviamos el id
         //para poder identificarla y modificarla para no cargarla como nueva
         const formData = {
-            id: document.querySelector('#id').value,
+            id: document.querySelector('#turno_id').value,
             fecha: document.querySelector('#fecha').value,
             paciente:{
                 id: document.querySelector('#pacienteId').value

@@ -1,3 +1,6 @@
 body{
-    background-color: gainsboro;
+    background-image: url(../recursos/fondo.jpg);
+}
+.cerrarSecion{
+    margin-right: 30px;
 }
