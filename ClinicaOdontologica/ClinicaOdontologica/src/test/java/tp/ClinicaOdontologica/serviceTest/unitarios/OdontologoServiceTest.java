@@ -1,4 +1,4 @@
-package tp.ClinicaOdontologica.serviceTest;
+package tp.ClinicaOdontologica.serviceTest.unitarios;
 
 import org.junit.jupiter.api.MethodOrderer;
 import org.junit.jupiter.api.Order;

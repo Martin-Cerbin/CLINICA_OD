@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <title>Odontologo</title>
+    <title>Turno</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
@@ -9,9 +9,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="styles/styles.css">
-    <script type="text/javascript" src="/js/get_odontologo.js"></script>
-    <script type="text/javascript" src="/js/update_odontologo.js"></script>
-    <script type="text/javascript" src="/js/delete_odontologo.js"></script>
 </head>
 <body>
 
@@ -32,23 +29,22 @@
     </nav>
 
     <div class="container">
-        <div id="div_odontologo_table">
-            <h1>Odontologo</h1>
+        <div id="div_turno_table">
+            <h1>Turno</h1>
             <div class="row col-md-6 table-responsive">
-                <table id="odontologoTable" class="table table-striped">
+                <table id="turnoTable" class="table table-striped">
                     <thead>
                     <tr>
+                        <th>modificar</th>
 
-                        <th>Modificar</th>
-                        
-                        <th>Matricula</th>
-                        <th>Nombre</th>
-                        <th>Apellido</th>
+                        <th>Fecha</th>
+                        <th>Paciente ID</th>
+                        <th>Odontologo ID</th>
 
                         <th>Eliminar</th>
                     </tr>
                     </thead>
-                    <tbody id="odontologoTableBody">
+                    <tbody id="turnoTableBody">
 
                     </tbody>
                 </table>
@@ -57,23 +53,23 @@
         <div class="row">
             <div class="col-sm-6" style="display: none;
                                                 background-color:#e6fffa; padding:10px; border-radius:3px"
-                id="div_odontologo_updating">
-                <form id="update_odontologo_form">
+                id="div_turno_updating">
+                <form id="update_turno_form">
                     <div class="form-group">
                         <label >Id:</label>
-                        <input type="text" class="form-control" id="odontologo_id" readonly>
+                        <input type="text" class="form-control" id="turno_id" readonly>
                     </div>
                     <div class="form-group">
-                        <label >Matricula:</label>
-                        <input type="text" class="form-control" placeholder="matricula" id="matricula">
+                        <label >Fecha:</label>
+                        <input type="text" class="form-control" placeholder="fecha" id="fecha">
                     </div>
                     <div class="form-group">
-                        <label >Nombre:</label>
-                        <input type="text" class="form-control" placeholder="nombre" id="nombre">
+                        <label >Paciente:</label>
+                        <input type="text" class="form-control" placeholder="paciente" id="paciente">
                     </div>
                     <div class="form-group">
-                        <label >Apellido:</label>
-                        <input type="text" class="form-control" placeholder="apellido" id="apellido">
+                        <label >Odontologo:</label>
+                        <input type="text" class="form-control" placeholder="odontologo" id="odontologo">
                     </div>
 
 
@@ -85,5 +81,9 @@
         </div>
         <hr>
     </div>
+
+    <script type="text/javascript" src="/js/get_turno.js"></script>
+    <script type="text/javascript" src="/js/update_turno.js"></script>
+    <script type="text/javascript" src="/js/delete_turno.js"></script>
 </body>
 </html>

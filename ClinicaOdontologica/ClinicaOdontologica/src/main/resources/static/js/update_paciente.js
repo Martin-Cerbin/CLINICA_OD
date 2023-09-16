@@ -28,6 +28,7 @@ window.addEventListener('load', function () {
 
         //invocamos utilizando la función fetch la API peliculas con el método PUT que modificará
         //la película que enviaremos en formato JSON
+
         const url = '/pacientes';
         const settings = {
             method: 'PUT',
@@ -36,8 +37,9 @@ window.addEventListener('load', function () {
             },
             body: JSON.stringify(formData)
         }
-          fetch(url,settings)
-          .then(response => response.json())
+
+        fetch(url,settings)
+        .then(response => response.json())
 
     })
  })

@@ -1,14 +1,13 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <title>Odontologo</title>
+    <title>Turno</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="/js/post_odontologo.js"></script>
     <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
@@ -32,26 +31,27 @@
     <div class="container">
         <div class="row">
             <div class="col-sm-7" style="background-color:#e6fffa; padding:10px; border-radius:3px">
-                <h3>Agregar odontologo</h3>
-                <form id="add_new_odontologo">
+                <h3>Agregar Turno</h3>
+                <form id="add_new_turno">
+
                     <div class="form-group">
-                        <label class="control-label" for="matricula">Matricula:</label>
-                        <input type="text" class="form-control" id="matricula"
-                            placeholder="Ingrese la matricula"
-                            name="matricula" required></input>
+                        <label class="control-label" for="fecha">Fecha:</label>
+                        <input type="text" class="form-control" id="fecha"
+                            placeholder="Ingrese la fecha"
+                            name="fecha" required></input>
                     </div>
                     <div class="form-group">
-                        <label class="control-label" for="nombre">Nombre:</label>
-                        <input type="text" class="form-control" id="nombre"
-                            placeholder="Ingrese el nombre"
-                            name="nombre" required></input>
+                        <label class="control-label" for="pacienteId">Paciente ID:</label>
+                        <input type="text" class="form-control" id="pacienteId"
+                            placeholder="Ingrese el ID"
+                            name="pacienteId" required></input>
                     </div>
 
                     <div class="form-group">
-                        <label class="control-label" for="apellido">Apellido:</label>
-                        <input type="text" class="form-control" id="apellido"
-                            placeholder="Ingrese el apellido"
-                            name="apellido" required></input>
+                        <label class="control-label" for="odontologoId">Odontologo ID:</label>
+                        <input type="text" class="form-control" id="odontologoId"
+                            placeholder="Ingrese el ID"
+                            name="odontologoId" required></input>
                     </div>
 
 
@@ -63,6 +63,6 @@
             </div>
         </div>
     </div>
-
+    <script type="text/javascript" src="/js/post_turno.js"></script>
 </body>
 </html>

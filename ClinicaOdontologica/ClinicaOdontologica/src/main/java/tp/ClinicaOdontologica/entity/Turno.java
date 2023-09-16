@@ -18,7 +18,8 @@ public class Turno {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     @Column
-    private LocalDate Fecha;
+    private LocalDate fecha;
+
     @ManyToOne
     @JoinColumn(name = "paciente_id",referencedColumnName = "id")
     private Paciente paciente;
@@ -30,12 +31,12 @@ public class Turno {
     }
     public Turno(Long id, LocalDate fecha, Paciente paciente, Odontologo odontologo) {
         this.id = id;
-        Fecha = fecha;
+        this.fecha = fecha;
         this.paciente = paciente;
         this.odontologo = odontologo;
     }
     public Turno(LocalDate fecha, Paciente paciente, Odontologo odontologo) {
-        Fecha = fecha;
+        this.fecha = fecha;
         this.paciente = paciente;
         this.odontologo = odontologo;
     }

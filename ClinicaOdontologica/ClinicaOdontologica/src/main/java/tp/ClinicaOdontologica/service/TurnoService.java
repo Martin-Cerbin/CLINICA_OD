@@ -21,6 +21,7 @@ public class TurnoService {
     public TurnoDTO guardarTurno(Turno turno){
         Turno turnoAguardar= turnoRepository.save(turno);
         return turnoATurnoDTO(turnoAguardar);
+
     }
     public void actualizarTurno(Turno turno){
          turnoRepository.save(turno);
@@ -53,7 +54,7 @@ public class TurnoService {
         TurnoDTO turnoDTO= new TurnoDTO();
         turnoDTO.setId(turno.getId());
         turnoDTO.setFecha(turno.getFecha());
-        turnoDTO.setOdodontologoId(turno.getOdontologo().getId());
+        turnoDTO.setOdontologoId(turno.getOdontologo().getId());
         turnoDTO.setPacienteId(turno.getPaciente().getId());
         return turnoDTO;
     }
@@ -62,7 +63,7 @@ public class TurnoService {
         Turno turno= new Turno();
         Paciente paciente= new Paciente();
         Odontologo odontologo= new Odontologo();
-        odontologo.setId(turnoDTO.getOdodontologoId());
+        odontologo.setId(turnoDTO.getOdontologoId());
         paciente.setId(turnoDTO.getPacienteId());
         turno.setFecha(turnoDTO.getFecha());
         turno.setId(turnoDTO.getId());

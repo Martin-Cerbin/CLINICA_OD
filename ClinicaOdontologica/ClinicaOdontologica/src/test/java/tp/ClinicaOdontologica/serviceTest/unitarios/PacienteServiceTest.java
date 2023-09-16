@@ -1,4 +1,4 @@
-package tp.ClinicaOdontologica.serviceTest;
+package tp.ClinicaOdontologica.serviceTest.unitarios;
 
 import org.junit.jupiter.api.MethodOrderer;
 import org.junit.jupiter.api.Order;
@@ -34,7 +34,7 @@ class PacienteServiceTest {
     @Order(2)
     void actualizarPaciente() {
         Long idABuscar= 1L;
-        Optional<Paciente> paciente= pacienteService.buscarPorId(idABuscar);
+        Optional<Paciente> paciente = pacienteService.buscarPorId(idABuscar);
         if(paciente.isPresent()) {
             Paciente pacienteAGuardar = new Paciente(idABuscar, "Agustin", "Pereyra", "1234", LocalDate.of(2023, 9, 05), new Domicilio("calle 1", 11, "La Rioja", "La Rioja"), "jorge.pereyra@digitalhouse.com", null);
             pacienteService.actualizarPaciente(pacienteAGuardar);

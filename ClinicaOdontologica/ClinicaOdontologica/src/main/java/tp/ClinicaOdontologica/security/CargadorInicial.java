@@ -1,6 +1,5 @@
 package tp.ClinicaOdontologica.security;
 
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
@@ -12,7 +11,6 @@ import tp.ClinicaOdontologica.repository.PacienteRepository;
 import tp.ClinicaOdontologica.repository.TurnoRepository;
 import tp.ClinicaOdontologica.repository.UsuarioRepository;
 
-import java.time.LocalDate;
 
 @Component
 public class CargadorInicial implements ApplicationRunner {
@@ -24,8 +22,6 @@ public class CargadorInicial implements ApplicationRunner {
     private OdontologoRepository odontologoRepository;
     @Autowired
     private TurnoRepository turnoRepository;
-
-
     @Override
     public void run(ApplicationArguments args) throws Exception {
         //crear un usuario
