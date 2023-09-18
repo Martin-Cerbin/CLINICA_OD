@@ -48,6 +48,7 @@ window.addEventListener('load', function () {
             odontologoRow.innerHTML =
                    '<td>' + updateButton + '</td>' +
 
+                    '<td class=\"td_Id\">' + odontologo.id + '</td>' +
                     '<td class=\"td_matricula\">' + odontologo.matricula + '</td>' +
                     '<td class=\"td_nombre\">' + odontologo.nombre + '</td>' +
                     '<td class=\"td_apellido\">' + odontologo.apellido +'</td>' +

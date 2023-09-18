@@ -1,6 +1,55 @@
 body{
     background-image: url(../recursos/fondo.jpg);
 }
+
 .cerrarSecion{
     margin-right: 30px;
 }
+.row{
+    justify-content: center;
+    margin-top: 5vh;
+    padding-bottom: 5vh;
+}
+.titulo{
+    display: flex;
+    justify-content: center;
+    margin-top: 30vh;
+    background-color: rgba(3, 20, 57, 0.5);
+    color: aliceblue;
+    font-family:cursive;
+    font-size: 50px;
+}
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+html {
+    min-height: 100%;
+    position: relative;
+  }
+  body {
+    margin: 0;
+    margin-bottom: 40px;
+  }
+  .tableDiv{
+    display: flex;
+    justify-content: center;
+  }
+  .container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5vh;
+    background-color: rgba(3, 20, 57, 0.5);
+  }
+  h1{
+    color: #fff;
+  }
+  .formulario{
+    width: 500px;
+  }

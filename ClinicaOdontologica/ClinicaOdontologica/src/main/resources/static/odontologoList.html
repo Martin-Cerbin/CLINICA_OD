@@ -64,31 +64,34 @@
 
             </ul>
           </div>
-        </div>
-
-        <div class="cerrarSecion">
+          <div class="cerrarSecion">
             <form action="logout" method="post">
                 <button type="submit" class="btn btn-warning">Cerrar Sesion</button>
             </form>
         </div>
+        </div>
+
+       
       </nav>
 
     <div class="container">
-        <div id="div_odontologo_table">
-            <h1>Odontologo</h1>
-            <div class="row col-md-6 table-responsive">
+      <h1>Odontologo</h1>
+        <div id="div_odontologo_table" class="tableDiv">
+            
+            <div class="row col-md-12 table-responsive">
                 <table id="odontologoTable" class="table table-striped">
                     <thead>
                     <tr>
 
                         <th>Modificar</th>
                         
+                        <th>ID</th>
                         <th>Matricula</th>
                         <th>Nombre</th>
                         <th>Apellido</th>
 
                         <th>Eliminar</th>
-                    </tr>
+                    
                     </thead>
                     <tbody id="odontologoTableBody">
 
@@ -97,7 +100,7 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-sm-6" style="display: none;
+            <div class="formulario" style="display: none;
                                                 background-color:#e6fffa; padding:10px; border-radius:3px"
                 id="div_odontologo_updating">
                 <form id="update_odontologo_form">
@@ -127,5 +130,7 @@
         </div>
         <hr>
     </div>
+
+    <footer><p>© 2023 todos los derechos reservados</p></footer>
 </body>
 </html>

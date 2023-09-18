@@ -61,18 +61,20 @@
 
             </ul>
           </div>
-        </div>
-
-        <div class="cerrarSecion">
+          <div class="cerrarSecion">
             <form action="logout" method="post">
                 <button type="submit" class="btn btn-warning">Cerrar Sesion</button>
             </form>
         </div>
+        </div>
+
+
       </nav>
     <div class="container">
-        <div id="div_turno_table">
-            <h1>Turno</h1>
-            <div class="row col-md-6 table-responsive">
+      <h1>Turno</h1>
+        <div id="div_turno_table" class="tableDiv">
+            
+            <div class="row col-md-12 table-responsive">
                 <table id="turnoTable" class="table table-striped">
                     <thead>
                     <tr>
@@ -83,7 +85,7 @@
                         <th>Odontologo ID</th>
 
                         <th>Eliminar</th>
-                    </tr>
+                    
                     </thead>
                     <tbody id="turnoTableBody">
 
@@ -92,7 +94,7 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-sm-6" style="display: none;
+            <div class="formulario" style="display: none;
                                                 background-color:#e6fffa; padding:10px; border-radius:3px"
                 id="div_turno_updating">
                 <form id="update_turno_form">
@@ -122,6 +124,7 @@
         </div>
         <hr>
     </div>
+    <footer><p>© 2023 todos los derechos reservados</p></footer>
 
     <script type="text/javascript" src="/js/get_turno.js"></script>
     <script type="text/javascript" src="/js/update_turno.js"></script>

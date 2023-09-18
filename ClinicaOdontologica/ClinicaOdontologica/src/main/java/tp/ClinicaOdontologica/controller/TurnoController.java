@@ -11,7 +11,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.time.LocalDate;
 import java.util.List;
 import java.util.Optional;
 
@@ -61,5 +60,18 @@ public class TurnoController {
     @GetMapping("/buscar/{id}")
     public ResponseEntity<Optional<TurnoDTO>> buscarPorId(@PathVariable Long id){
         return ResponseEntity.ok(turnoService.buscarPorID(id));
+    }
+
+    /* ========== ACTUALIZAR ========== */
+    @PutMapping
+    public ResponseEntity<String> actualizarTurno(@RequestBody TurnoDTO turnoDTO) {
+        Optional<TurnoDTO> turnoBuscado = turnoService.buscarPorID(turnoDTO.getId());
+        if (turnoBuscado.isPresent()) {
+            Turno turno = turnoService.turnoDTOaTurno(turnoDTO);
+            turnoService.actualizarTurno(turno);
+            return ResponseEntity.ok("Turno Actualizado con Exito: " + turnoDTO.getId());
+        } else {
+            return ResponseEntity.badRequest().body("No se pudo actualizar el turno solicitado: " + turnoDTO.getId());
+        }
     }
 }
