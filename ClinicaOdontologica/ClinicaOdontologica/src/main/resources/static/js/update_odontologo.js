@@ -27,13 +27,12 @@ window.addEventListener('load', function () {
             headers: {
                 'Content-Type': 'application/json',
             },
-            body: JSON.stringify(formData)
-        }
+            body: JSON.stringify(formData)}
+                                       
           fetch(url,settings)
           .then(response => response.json())
-
+        })  
     })
-})
 
     //Es la funcion que se invoca cuando se hace click sobre el id de un odontologo del listado
     //se encarga de llenar el formulario con los datos de la pelicula
@@ -56,4 +55,4 @@ window.addEventListener('load', function () {
           }).catch(error => {
               alert("Error: " + error);
           })
-    }
+}

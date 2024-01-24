@@ -48,6 +48,7 @@ window.addEventListener('load', function () {
             turnoRow.innerHTML =
                    '<td>' + updateButton + '</td>' +
 
+                    '<td class=\"td_turno_id\">' + turno.id + '</td>' +
                     '<td class=\"td_fecha\">' + turno.fecha + '</td>' +
                     '<td class=\"td_paciente\">' + turno.pacienteId + '</td>' +
                     '<td class=\"td_odontologo\">' + turno.odontologoId +'</td>' +

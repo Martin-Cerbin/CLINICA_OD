@@ -1,5 +1,11 @@
 package tp.ClinicaOdontologica.serviceTest.integracion;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.json.JsonMapper;
+import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
+import org.hibernate.bytecode.internal.bytebuddy.BytecodeProviderImpl;
+import org.junit.jupiter.api.Order;
 import tp.ClinicaOdontologica.dto.TurnoDTO;
 import tp.ClinicaOdontologica.entity.Domicilio;
 import tp.ClinicaOdontologica.entity.Odontologo;
@@ -21,6 +27,7 @@ import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
 
 import java.time.LocalDate;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 
 @SpringBootTest
@@ -42,6 +49,7 @@ public class TestIntegracionTurnos {
 
     }
     @Test
+    @Order(1)
     public void listarTodosTurnosTest() throws Exception {
         cargarDatos();
         MvcResult resultado= mockMvc.perform(MockMvcRequestBuilders.get("/turnos").accept(MediaType.APPLICATION_JSON))
@@ -49,4 +57,25 @@ public class TestIntegracionTurnos {
                 .andExpect(MockMvcResultMatchers.status().isOk()).andReturn();
         assertFalse(resultado.getResponse().getContentAsString().isEmpty());
     }
+
+    @Test
+    @Order(2)
+    public void actualizarTurnoTest() throws Exception {
+        cargarDatos();
+        TurnoDTO turnoDTO = crearTurnoDTO();
+        ObjectMapper objectMapper = new ObjectMapper();
+        objectMapper.registerModule(new JavaTimeModule());
+
+        MvcResult result = mockMvc.perform(MockMvcRequestBuilders.put("/turnos")
+                        .accept(MediaType.APPLICATION_JSON_VALUE)
+                                .contentType(MediaType.APPLICATION_JSON_VALUE)
+                                        .content(objectMapper.writeValueAsString(turnoDTO)))
+                        .andReturn();
+        assertEquals(200, result.getResponse().getStatus());
+    }
+
+    private TurnoDTO crearTurnoDTO(){
+        TurnoDTO turnoDTO = new TurnoDTO(1L, LocalDate.of(2023,9,20),1L,1L);
+        return turnoDTO;
+    };
 }

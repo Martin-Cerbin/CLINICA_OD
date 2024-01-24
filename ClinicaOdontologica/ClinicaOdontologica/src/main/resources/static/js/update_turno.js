@@ -1,24 +1,19 @@
 window.addEventListener('load', function () {
 
-
-    //Buscamos y obtenemos el formulario donde estan
-    //los datos que el usuario pudo haber modificado de la odontologo
     const formulario = document.querySelector('#update_turno_form');
 
     formulario.addEventListener('submit', function (event) {
         let turnoId = document.querySelector('#turno_id').value;
 
-        //creamos un JSON que tendrá los datos de la película
-        //a diferencia de una pelicula nueva en este caso enviamos el id
-        //para poder identificarla y modificarla para no cargarla como nueva
+        // JSON CON LOS DATOS DEL NUEVO TURNO
         const formData = {
             id: document.querySelector('#turno_id').value,
             fecha: document.querySelector('#fecha').value,
-            paciente:{
-                id: document.querySelector('#pacienteId').value
+            pacienteId:{
+                id: document.querySelector('#paciente').value
             },
-            odontologo:{
-                id : document.querySelector('#odontologoId').value
+            odontologoId:{
+                id : document.querySelector('#odontologo').value
             } 
         };
 
